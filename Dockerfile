@@ -1,9 +1,9 @@
 FROM node:18.20.4-alpine3.20
 RUN apk upgrade --no-cache \
   && mkdir -p /app
-  
-WORKDIR /app
 
+WORKDIR /app
+# hadolint ignore=DL3016
 RUN npm install -g json-server \
   && mkdir /app/public
 
